@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue slider</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://kit.fontawesome.com/4a941afab0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div class="container-flex">
+                <i class="fas fa-chevron-left fa-3x" @click="prevImage"></i>
+                <img :src="images[imagesIndex]" alt="Immagine">
+                <i class="fas fa-chevron-right fa-3x" @click="nextImage"></i>
+            </div>
+            <select class="droplist" name="" v-model="imagesIndex">
+                <option value="" :value="option-1" v-for="option in images.length">
+                    {{option}}
+                </option>
+            </select>
+        </div>
+
+        <script src="main.js" charset="utf-8"></script>
+
+    </body>
+</html>
