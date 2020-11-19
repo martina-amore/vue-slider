@@ -15,8 +15,8 @@
                 <i class="fas fa-chevron-right fa-3x" @click="nextImage"></i>
             </div>
             <select class="droplist" name="" v-model="imagesIndex">
-                <option value="" :value="option - 1" v-for="option in images.length">
-                    {{option}}
+                <option value="" :value="index" v-for="(option, index) in images">
+                    {{index + 1}}
                 </option>
             </select>
         </div>
